@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+<link rel="stylesheet" href="CSS/stylee.css">
+</head>
+<body>
+    <div>
+        <h2 class="title">
+         crud management
+        </h2>
+    </div>
+    <div class="container"><!-- container -->
+
+        <div class="">
+            <input type="text"  placeholder="Name" id="productName">
+            <div class="number">   <!-- number -->
+                <input type="number" onkeyup="getTotal()" placeholder="Price" id="price">
+                <input type="number" onkeyup="getTotal()"  placeholder="Taxes" id="taxes">
+                <input type="number" onkeyup="getTotal()"  placeholder="Ads" id="ads">
+                <input type="number" onkeyup="getTotal()" placeholder="Discount" id="discount">
+                <small id="total"></small>
+            </div> <!-- number -->
+         
+            <input type="number" placeholder="Count" id="count">
+            <input type="text" placeholder="Category"  id="category">
+            <input type="button" value="Create" id="btncreate">
+            <input type="text" placeholder="Search" onkeyup="GetName(this)"  id="search">
+           
+          
+            <div class="searchby">  <!-- searchby -->
+                <input type="button" value="Search By Name (Default)"  id="searchbyname" onclick="GetName(this)">
+                <input type="button" value="Search By Category" id="searchbycategory" onclick="GetName(this)">
+            </div> <!-- searchby -->
+            <div id="deleteall"></div>
+            <div class="data"> <!-- data -->
+<table id="showallData"><!-- showallData -->
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Taxes</th>
+            <th>Ads</th>
+            <th>Discount</th>
+            <th>Total</th>
+            <th>Category</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody id="tbody"></tbody>
+</table><!-- showallData -->
+
+</div><!-- data -->
+      
+        </div>
+
+    </div><!-- container -->
+   
+
+    <script src="JS/main.js"></script>
+</body>
+</html>
